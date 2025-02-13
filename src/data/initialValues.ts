@@ -1,0 +1,18 @@
+export const initialValues = {
+  formText: "",
+  formNumber: 0,
+  formEmail: "",
+  formPassword: "",
+  confirmPassword: "",
+  // radioOptions: "",
+  // formCheckbox: false,
+  // formSelect: "",
+  // formFile: null,
+  formDate: "",
+  formTime: "",
+  formRange: 0,
+  formTel: "",
+  formUrl: "",
+  formColor: "",
+  formSearch: "",
+};

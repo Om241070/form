@@ -22,16 +22,16 @@ export const formValidation = Yup.object({
     .oneOf([Yup.ref("formPassword"), ""], "Password must match")
     .required("Please confirm your password"),
 
-  radioOptions: Yup.string().required("Select your Option"),
+  // radioOptions: Yup.string().required("Select your Option"),
 
-  formCheckbox: Yup.boolean().oneOf(
-    [true],
-    "You must accept the terms and conditions"
-  ),
+  // formCheckbox: Yup.boolean().oneOf(
+  //   [true],
+  //   "You must accept the terms and conditions"
+  // ),
 
-  formSelect: Yup.string().required("Please select an option"),
+  // formSelect: Yup.string().required("Please select an option"),
 
-  formFile: Yup.mixed().nullable().required("Please upload a file"),
+  // formFile: Yup.mixed().nullable().required("Please upload a file"),
 
   formDate: Yup.date().required("Please select a date"),
 

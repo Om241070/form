@@ -1,10 +1,9 @@
-import { useFormik } from "formik";
 import { useState } from "react";
-import { formValidation } from "../schemas"; // Make sure to have a valid schema
+import { Form as FormikForm, useFormik } from "formik";
+import { formValidation } from "../schemas";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-// Initial form values
-const initialValues = {
+const initialValuesCuForm = {
   formText: "",
   formNumber: "",
   formEmail: "",
@@ -23,7 +22,7 @@ const initialValues = {
   formSearch: "",
 };
 
-export default function Form() {
+export default function CustomForm() {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -32,11 +31,11 @@ export default function Form() {
 
   const { handleSubmit, handleChange, touched, errors, handleBlur, values } =
     useFormik({
-      initialValues,
-      validationSchema: formValidation, // Your form validation schema
+      initialValues: initialValuesCuForm,
+      validationSchema: formValidation,
       onSubmit: (values, action) => {
         console.log("Form Values:", values);
-        action.resetForm(); // Reset form after submission
+        action.resetForm();
       },
     });
 
